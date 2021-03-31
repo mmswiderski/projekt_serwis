@@ -1,0 +1,60 @@
+extends layout
+
+block content
+
+  div(class='title')
+    h1= title
+    h3 Witaj w #{title}
+  
+  div(class='container')
+    div(class='row row-cols-3', class='center')
+        div(class="col")
+            div(class='card mb-3', style='max-width: 850px;', class='center')
+                div(class='row g-0')
+                    div(class='col-md-4')
+                        img(src="/images/arabika.jpg", class='card-img-top', alt='Arabika')
+                    div(class='col-md-8')
+                        div(class='card-body')
+                            h5(class='card-title')
+                                p Arabika - kawa o głębokim aromacie 
+                            p(class='card-text')
+                                p 
+        div(class="col")                        
+            div(class='card mb-3', style='max-width: 850px;', class='center')
+                div(class='row g-0')
+                    div(class='col-md-4')
+                        img(src="/images/brazylijska.jpg", class='card-img-top', alt='Kawa brazylijska')
+                    div(class='col-md-8')
+                        div(class='card-body')
+                            h5(class='card-title')
+                                p Kawa brazylijska
+                            p(class='card-text')
+                                p
+        div(class="col")    
+            div(class='card mb-3', style='max-width: 850px;', class='center')
+                div(class='row g-0')
+                    div(class='col-md-4')
+                        img(src="/images/uganda.jpg", class='card-img-top', alt='Kawa z ugandy')
+                    div(class='col-md-8')
+                        div(class='card-body')
+                            h5(class='card-title')
+                                p Uganda
+                            p(class='card-text')
+                                p
+        div(class="col")
+             div(class='card mb-3', style='max-width: 850px;', class='center')
+                div(class='row g-0')
+                    div(class='col-md-4')
+                        img(src="/images/peru.jpg", class='card-img-top', alt='Kawa z Peru')
+                    div(class='col-md-8')
+                        div(class='card-body')
+                            h5(class='card-title')
+                                p Peru
+                            p(class='card-text')
+                                p
+
+
+
+block footer 
+  p 2021 &copy; Witaj w Świecie Kawy! Zpraszamy do kontaktu - swiatkawy@com.pl
+    
