@@ -76,3 +76,13 @@ a {
 .card-body {
   margin-top: 5rem;
 }
+
+.hide {
+  visibility: hidden;
+  display: none;
+}
+
+.show {
+  display: block;
+  visibility: visible;
+}

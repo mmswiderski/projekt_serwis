@@ -2,22 +2,22 @@ extends layout
 
 block content
 
-  div(class='title')
-    h1= title
-    h3 Poznaj #{title}
-  
-  div(class='container')
-   div(class='row')
-      div(class='col-sm')
-        h4 W naszej ofercie znajdą Państwo usługi związane z obsługą wydarzeń firmowych oraz rodzinnych. Oferujemy również serwis urządzeń. Zapraszamy do zapoznania się poprzez pobranie przygotowanych plików w formacie pdf: 
-        h5 Wydarzenia
-        br
-        h5 Serwis
+    div(class='title')
+        h1= title
+        h3 Poznaj #{title}
 
-    div(class='input-group mb-3')
-        from(action='/applications', method='POST')
-        input(type='text', class='form-control', placeholder='Wpisz nazwę oferty', aria-label='Recipients username', aria-describedby='button-addon2')
-        button(class='btn btn-outline-secondary', type='button', id='button-addon2')
-            p Pobierz
-  
-   
+    div(class='container')
+        div(class='row')
+            div(class='col-sm')
+                h4 W naszej ofercie znajdą Państwo usługi związane z obsługą wydarzeń firmowych oraz rodzinnych. Oferujemy również serwis urządzeń. Zapraszamy do zapoznania się poprzez pobranie przygotowanych plików w formacie pdf:
+                h5 Wydarzenia
+                br
+                h5 Serwis
+
+        div(class='col')
+            div
+                form(action='/uslugi',method='post')
+                    input(type='text', name='file', class='form-control', placeholder='Wpisz nazwę oferty')
+                    input(type='submit', value='Pobierz')
+        div(class='col')
+            p(class=(error ? 'show' : 'hide')) Nie znaleziono podanego pliku oferty.
