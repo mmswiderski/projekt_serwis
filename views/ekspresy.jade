@@ -1,14 +1,22 @@
+
+script(src="javascripts/ekspresy.js")
+
 extends layout
+
 
 block content
 
   div(class='title')
     h1= title
     h3 Witaj w #{title}
-    h2 #{my_var}
 
- 
     div(class='container')
+
+        div(class='input-group mb-3')
+        input(type='text', class='form-control', placeholder='Wpisz nazwę ekspresu', aria-label='Recipients username', aria-describedby='button-addon2')
+        button(class='btn btn-outline-secondary', type='button', id='button-addon2')
+            Tekst Wyszukaj
+
         div(class='row row-cols-4', class='center')
         div(class="col")
             div(class='card mb-3', style='max-width: 850px;', class='center')
