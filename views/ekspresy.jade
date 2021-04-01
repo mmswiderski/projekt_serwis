@@ -1,5 +1,4 @@
 extends layout
-script(src="/javascripts/ekspresy.js")
 
 block content
 
@@ -7,50 +6,54 @@ block content
     h1= title
     h3 Witaj w #{title}
 
-    div(class='container')
+  div(class='container')
+    div(class='row')
+        div(class='col')
+            p Szukana fraza: #{s}
+            div(class='input-group mb-3')
+            form(action='/ekspresy',method='post')
+                input(type='text', name='search', class='form-control', placeholder='Wpisz nazwę ekspresu', aria-label='Name')
+                input(type='submit', value='Wyszukaj')
 
-        div(class='input-group mb-3')
-        input(type='text', class='form-control', placeholder='Wpisz nazwę ekspresu', aria-label='Recipients username', aria-describedby='button-addon2')
-        button(class='btn btn-outline-secondary', type='button', id='button-addon2')
-            Tekst Wyszukaj
-
-        div(class='row row-cols-4', class='center')
+    div(class='row row-cols-4', class='center')
         div(class="col")
-            div(class='card mb-3', style='max-width: 850px;', class='center')
-                div(class='row g-0')
+            div(class='card mb-3 center', style='max-width: 850px;')
+                div(class=("KAWIARKA".toLowerCase().includes(s) && s ? 'searched-value-highlighter row g-0' : 'row g-0'))
                     div(class='col-md-4')
                         img(src="/images/kawiarka.jpg", class='card-img-top', alt='Kawiarka')
-                    div(class='col-md-8')
+                    div(class='col-md-7')
                         div(class='card-body')
                             h5(class='card-title')
-                                p KAWIARKA 
-                            p(class='card-text')
-                                p Makinetka oryginalnie moka - ekspres dzbankowy, często nazywana również kupresem, kafetierką, kawiarką — ciśnieniowy czajniczek do parzenia kawy. Makinetki są najbardziej popularne we Włoszech.
+                                p KAWIARKA
+                            p(class='card-text pad') Makinetka oryginalnie moka - ekspres dzbankowy, często nazywana również kupresem, kafetierką, kawiarką — ciśnieniowy czajniczek do parzenia kawy. Makinetki są najbardziej popularne we Włoszech.
         div(class="col")
             div(class='card mb-3', style='max-width: 850px;', class='center')
-                div(class='row g-0')
+                div(class=("EKSPRES KAPSUŁKOWY".toLowerCase().includes(s) && s ? 'searched-value-highlighter row g-0' : 'row g-0'))
                     div(class='col-md-4')
                         img(src="/images/ekspres_maly.jpg", class='card-img-top', alt='Kawiarka')
                     div(class='col-md-8')
                         div(class='card-body')
                             h5(class='card-title')
                                 p EKSPRES KAPSUŁKOWY
-                            p(class='card-text')
+                            p(class='card-text pad')
                                 p Ekspresy kapsułkowe to urządzenia automatyczne, które do przygotowania kawy wykorzystują specjalne kapsułki ze zmieloną kawą. Kapsułki te zamknięte są próżniowo, dzięki czemu kawa zachowuje świeżość i aromat.
-        div(class="col")    
+
+    div(class='row row-cols-4', class='center')
+        div(class="col")
             div(class='card mb-3', style='max-width: 850px;', class='center')
-                div(class='row g-0')
+                div(class=("EKSPRES PRZELEWOWY".toLowerCase().includes(s) && s ? 'searched-value-highlighter row g-0' : 'row g-0'))
                     div(class='col-md-4')
                         img(src="/images/ekspres1.jpg", class='card-img-top', alt='Kawiarka')
                     div(class='col-md-8')
                         div(class='card-body')
                             h5(class='card-title')
                                 p EKSPRES PRZELEWOWY
-                            p(class='card-text')
+                            p(class='card-text pad')
                                 p Ekspres przelewowy to taki, w którym wrzątek dozowany jest do pojemnika z kawą mieloną i napar przesącza się przez filtr do dzbanka. Różnica w stosunku do ciśnieniowego polega na tym, że woda nie jest pod ciśnieniem, jest tylko gorąca, jednak ze względu na długi kontakt wody ze zmieloną kawą napar zawiera zwykle więcej kofeiny.
+
         div(class="col")
              div(class='card mb-3', style='max-width: 850px;', class='center')
-                div(class='row g-0')
+                 div(class=("EKSPRES CIŚNIENIOWY".toLowerCase().includes(s) && s ? 'searched-value-highlighter row g-0' : 'row g-0'))
                     div(class='col-md-4')
                         img(src="/images/ekspres2.jpg", class='card-img-top', alt='Kawiarka')
                     div(class='col-md-8')
@@ -59,5 +62,6 @@ block content
                                 p EKSPRES CIŚNIENIOWY
                             p(class='card-text')
                                 p Ekspres ciśnieniowy – urządzenie do przygotowywania kawy przy wykorzystaniu zwiększonego ciśnienia. Najczęściej wyposażone w specjalną dyszę, umożliwiającą spienianie mleka do kawy typu cappuccino.
-block footer 
+
+block footer
   p 2021 &copy; Witaj w Świecie Kawy! Zpraszamy do kontaktu - swiatkawy@com.pl

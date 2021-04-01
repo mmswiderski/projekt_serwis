@@ -30,7 +30,7 @@ footer{
   background:rgba(255,255,255,0.8);
 }
 .col{
-  margin-left: 17%;
+  margin-left: 7%;
   padding-top: 7%;
   padding-bottom: 2%;
 }
@@ -45,7 +45,6 @@ footer{
 -moz-box-shadow: inset 0 0 20px rgb(205, 143, 50);
 -webkit-box-shadow: inset 0 0 20px rgb(205, 143, 50);
 box-shadow: inset 0 0 20px rgb(205, 143, 50);
-transform: scale(1.1,1.1);
 }
 .contact{
   padding-top: 5%;
@@ -56,6 +55,10 @@ transform: scale(1.1,1.1);
 .col-sm{
   padding-bottom: 3%;
 }
+.pad {
+  padding: 3%;
+}
+
 h1, h3{
   color:whitesmoke;
 }
@@ -68,4 +71,8 @@ h3{
 a {
   color: #00B7FF;
   font-size: 25px;
+}
+
+.card-body {
+  margin-top: 5rem;
 }
